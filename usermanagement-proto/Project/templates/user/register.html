@@ -1,0 +1,12 @@
+{% extends 'user/index.html' %}
+{% block start %}
+
+<div class ="container">
+<form method="POST">
+    {{register_form.as_p}}
+    {% csrf_token %}
+
+    <input type="submit",value="Register">
+</form>
+</div>
+{% endblock start %}
