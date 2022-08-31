@@ -1,0 +1,49 @@
+{% extends 'user/base2.html' %}
+
+{% block content %}
+{% load static %}
+<body style="background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+">
+    <div class="container">
+        
+        <h1 style="color:black ;text-align:center;padding-top:20px;"><b>Full Package</b></h1>
+
+    </div>
+    
+      <div class="container" style="width:40%;padding-top:60px;">
+      
+
+
+    <div class="card" style="width: 18rem;">
+      {% if users.event_photo == 'static/images/defaultu.jpg' %}
+      <img src="{% static 'images/defaultu.jpg' %}" width="100px;" height="100px;">
+      {% else %}
+      <img src="{{ users.event_photo.url }}" width="100px;" height="100px;">
+      {% endif %}
+                  
+     
+      <div class="card-body">
+          <table>
+       <h5 class="card-title"> {{users.event_name}}</h5>
+        <p class="card-text">Event Type: {{users.category.event_type}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Description: {{users.event_des}}</li>
+        
+        <li class="list-group-item">No Of People: {{users.event_people}}</li>
+        <li class="list-group-item">Total Cost: {{users.event_cost}}</li>
+        <li class="list-group-item">Food Type: {{users.category.event_food}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="{% url 'show_events' %}" class="card-link">Go Back</a>
+        <a href="{% url 'load_registration' %}" class="card-link">BOOK NOW</a>
+        
+      </div>
+      </div>
+
+    
+
+</body>
+</html>
+{% endblock %}

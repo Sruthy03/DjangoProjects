@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .lightbox:hover{
+        width: 300px;
+        height: 200px;
+        border-radius: 2px;
+
+    }
+      
+        
+    </style>
+    {% load static %}
+    
+    <meta charset="UTF-8">
+    <title>event</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <abbr title="eVenTmatro"><img src="{% static 'images/logo.jpg' %}" class="img-responsive" width="100px;" height="80px;"></abbr>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ">
+      <a class="nav-item nav-link text-black " href="{% url 'homepage' %}"><b>HOME</b> <span class="sr-only"></span></a>
+      <a class="nav-item nav-link text-black" href="{% url 'about' %}"><b>ABOUT</b></a>
+      <a class="nav-item nav-link text-black" href="{% url 'gallary' %}"><b>GALLARY</b></a>
+      <a class="nav-item nav-link text-black" href="{% url 'contact' %}"><b>REACH US</b></a>
+      <a class="nav-item nav-link text-black" href="{% url 'load_signup' %}"><b>SIGN UP</b></a>
+      <a class="nav-item nav-link text-black" href="{% url 'loginpage' %}"><b>LOGIN</b></a>
+
+    </div>
+  </div>
+</nav>
+<script>
+       $(function (){
+        $('a').each(function(){
+            if ($(this).prop('href') === window.location.href) {
+                $(this).css({"background": "linear-gradient(to left, #f58D28 0, #f58D28 66%, #ba5c00 100%)", "border-radius": "30px"});
+    
+            }
+        })
+    })
+
+</script>
+<body>
+    <section class="gallery-block cards-gallery">
+        <div class="container">
+            <div >
+                <h1 class="text-dark p-4 text-center" style="font-family: 'Pacifico', cursive;"><b>“ Our Events Records “</b></h1>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/w1.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/w2.jpg' %}" alt="image1" class="card-img-top" height="234px;">
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/w1.jpg' %}" alt="image1" class="card-img-top" height="234px;" >
+                        </a>
+                       
+    
+                    </div>
+                </div>
+    
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/w4.jpg' %}" alt="image1" class="card-img-top" height="234px;" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/w5.jpg' %}" alt="image1" class="card-img-top" height="234px;" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/w6.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/g8.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/g9.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/g10.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+               
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/g11.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/g12.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="img">
+                            <img src="{% static 'images/g8.jpg' %}" alt="image1" class="card-img-top" >
+                        </a>
+                        
+    
+                    </div>
+    
+                </div>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+            </div>
+        </div>
+    </section>
+   
+
+
+
+
+<div class="container-fluid2 mt-5 text-center bg-dark p-5 text-white">
+    <h3 class="mb-5"> <b>EXPLORE YOUR MOMENTS...!</b></h3>
+
+  <img src="{% static 'images/F1.png' %}" class="fluid" width="100px;" height="100px;">
+
+
+  <img src="{% static 'images/f2.png' %}" class="fluid " width="100px;" height="100px;">
+
+
+  <img src="{% static 'images/f3.png' %}" class="fluid" width="100px;" height="100px;">
+
+
+  <img src="https://www.keralatourism.org/images/kt/tr-icon-newsletter.png" class="fluid">
+
+
+
+
+
+<form class="mt-5" >
+    <b>Get news send straight to our inbox </b> 
+  
+  <p class="mt-5">eVenTmatro Events and Entertainments Pvt Ltd is passionate about crafting charmingly timeless and elegant luxurious weddings and events at stunning venues throughout the world. Kocchi, Kerala, India - 695 033
+Phone: +91 471 2321132, Fax: +91 471 2322279, E-mail: info@eVenTmatro.org. DLF PHASE - 2 L-25/9
+Near by Privat Hospital ,Kochi ,Kerala,122002</p>
+
+</form>
+        <p class="mt-5"><i class="fab fa-facebook" style="font-size:3em;"></i> <i class="fab fa-instagram-square" style="font-size:3em;"></i>   <i class="fab fa-twitter-square" style="font-size:3em;"></i>   <i class="fab fa-whatsapp-square" style="font-size:3em;"></i></p>
+</div>
+
+</body>
+</html>
+
